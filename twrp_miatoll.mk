@@ -15,8 +15,8 @@
 #
 
 # Release name
-PRODUCT_RELEASE_NAME := sweet
-DEVICE_PATH := device/xiaomi/sweet
+PRODUCT_RELEASE_NAME := miatoll
+DEVICE_PATH := device/xiaomi/miatoll
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
@@ -27,8 +27,8 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 $(call inherit-product, device/xiaomi/sweet/device.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := sweet
-PRODUCT_NAME := twrp_sweet
+PRODUCT_DEVICE := miatoll
+PRODUCT_NAME := twrp_miatoll
 PRODUCT_BRAND := Redmi
-PRODUCT_MODEL := M2101K6G
+PRODUCT_MODEL := Redmi Note 9
 PRODUCT_MANUFACTURER := Xiaomi

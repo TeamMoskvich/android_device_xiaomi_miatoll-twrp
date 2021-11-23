@@ -1,10 +1,10 @@
 <manifest version="1.0" type="device">
     <hal format="hidl">
-        <name>vendor.xiaomi.cit.bluetooth</name>
+        <name>vendor.lineage.trust</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>IBluetoothService</name>
+            <name>IUsbRestrict</name>
             <instance>default</instance>
         </interface>
     </hal>

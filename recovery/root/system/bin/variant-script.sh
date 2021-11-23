@@ -1,42 +1,62 @@
 #!/system/bin/sh
 # This script is needed to automatically set device props.
 
-load_sweet()
+
+load_curtana()
 {
-    resetprop "ro.product.model" "M2101K6G"
-    resetprop "ro.product.vendor.model" "M2101K6G"
-    resetprop "ro.product.name" "sweet"
-    resetprop "ro.build.product" "sweet"
-    resetprop "ro.product.device" "sweet"
-    resetprop "ro.product.system.device" "sweet"
-    resetprop "ro.product.vendor.device" "sweet"
-    resetprop "ro.vendor.product.device" "sweet"
+    resetprop "ro.product.model" "Redmi Note 9"
+    resetprop "ro.product.name" "curtana"
+    resetprop "ro.build.product" "curtana"
+    resetprop "ro.product.device" "curtana"
+    resetprop "ro.vendor.product.device" "curtana"
 }
 
-load_sweetin()
+load_joyeuse()
 {
-    resetprop "ro.product.model" "M2101K6I"
-    resetprop "ro.product.vendor.model" "M2101K6I"
-    resetprop "ro.product.name" "sweetin"
-    resetprop "ro.build.product" "sweetin"
-    resetprop "ro.product.device" "sweetin"
-    resetprop "ro.product.system.device" "sweetin"
-    resetprop "ro.product.vendor.device" "sweetin"
-    resetprop "ro.vendor.product.device" "sweetin"
+    resetprop "ro.product.model" "Redmi Note 9 Pro"
+    resetprop "ro.product.name" "joyeuse"
+    resetprop "ro.build.product" "joyeuse"
+    resetprop "ro.product.device" "joyeuse"
+    resetprop "ro.vendor.product.device" "joyeuse"
 }
 
-variant=$(getprop ro.boot.hwc)
-echo $variant
+load_excalibur()
+{
+    resetprop "ro.product.model" "Redmi Note 9 Pro Max"
+    resetprop "ro.product.name" "excalibur"
+    resetprop "ro.build.product" "excalibur"
+    resetprop "ro.product.device" "excalibur"
+    resetprop "ro.vendor.product.device" "excalibur"
+}
 
-case $variant in
-    "GLOBAL")
-        load_sweet
+load_gram()
+{
+    resetprop "ro.product.model" "POCO M2 Pro"
+    resetprop "ro.product.name" "gram"
+    resetprop "ro.build.product" "gram"
+    resetprop "ro.product.device" "gram"
+    resetprop "ro.vendor.product.device" "gram"
+}
+
+
+project=$(getprop ro.boot.hwname)
+echo $project
+
+case $project in
+    "curtana")
+        load_curtana
         ;;
-    "INDIA")
-        load_sweetin
+    "joyeuse")
+        load_joyeuse
+        ;;
+    "excalibur")
+        load_excalibur
+        ;;
+    "gram")
+        load_gram
         ;;
     *)
-        load_sweet
+        load_curtana
         ;;
 esac
 

@@ -30,7 +30,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := joyeuse,curtana,gram,excalibur,miatoll
+TARGET_OTA_ASSERT_DEVICE := joyeuse,curtana,gram,excalibur
 
 TARGET_COPY_OUT_VENDOR := vendor
 
@@ -62,8 +62,8 @@ TW_INCLUDE_RESETPROP := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_DEFAULT_BRIGHTNESS := 1200
-TW_Y_OFFSET := 91
-TW_H_OFFSET := -91
+TW_Y_OFFSET := 102
+TW_H_OFFSET := -102
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 TARGET_USES_MKE2FS := true

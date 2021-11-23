@@ -24,7 +24,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/xiaomi/sweet/device.mk)
+$(call inherit-product, device/xiaomi/miatoll/device.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := miatoll

@@ -69,6 +69,7 @@ TARGET_USES_LOGD := true
 TARGET_USES_MKE2FS := true
 TW_NO_SCREEN_BLANK := true
 TW_EXCLUDE_APEX := true
+TW_CUSTOM_CPU_TEMP_PATH := /sys/class/thermal/thermal_zone18/temp
 
 # Vibrator
 TW_SUPPORT_INPUT_AIDL_HAPTICS := true

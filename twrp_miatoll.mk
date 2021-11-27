@@ -30,5 +30,5 @@ $(call inherit-product, device/xiaomi/miatoll/device.mk)
 PRODUCT_DEVICE := miatoll
 PRODUCT_NAME := twrp_miatoll
 PRODUCT_BRAND := Redmi
-PRODUCT_MODEL := Redmi Note 9
+PRODUCT_MODEL := Redmi Note 9S/9 Pro/9 Pro Max
 PRODUCT_MANUFACTURER := Xiaomi

@@ -15,7 +15,7 @@
 #
 
 # Release name
-PRODUCT_RELEASE_NAME := miatoll-fbev2
+PRODUCT_RELEASE_NAME := miatoll_fbev2
 DEVICE_PATH := device/xiaomi/miatoll
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
@@ -30,8 +30,8 @@ $(call inherit-product, $(DEVICE_PATH)/device.mk)
 $(call inherit-product, $(DEVICE_PATH)/crypto/fbev2.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := miatoll-fbev2
-PRODUCT_NAME := twrp_miatoll-fbev2
+PRODUCT_DEVICE := miatoll_fbev2
+PRODUCT_NAME := twrp_miatoll_fbev2
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi Note 9S/9 Pro/9 Pro Max
 PRODUCT_MANUFACTURER := Xiaomi

@@ -26,9 +26,6 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 # Inherit device configuration
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
 
-# Inherit fbev2 crypto configuration
-$(call inherit-product, $(DEVICE_PATH)/crypto/fbev2.mk)
-
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := miatoll_fbev2
 PRODUCT_NAME := twrp_miatoll_fbev2

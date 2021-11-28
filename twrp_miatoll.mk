@@ -26,9 +26,6 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 # Inherit device configuration
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
 
-# Inherit legacy crypto configuration
-$(call inherit-product, $(DEVICE_PATH)/crypto/legacy.mk)
-
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := miatoll
 PRODUCT_NAME := twrp_miatoll

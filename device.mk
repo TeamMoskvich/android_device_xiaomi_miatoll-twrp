@@ -48,6 +48,7 @@ PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_RECOVERY_DEVICE_MODULES += libion libandroidicu vendor.display.config@1.0 vendor.display.config@2.0 libdisplayconfig.qti
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/$(PRODUCT_RELEASE_NAME)/recovery.fstab
 
 # TWRP specific build flags
 TW_THEME := portrait_hdpi
@@ -80,4 +81,9 @@ RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/libdisplayconfig.qti.so
 
 PRODUCT_COPY_FILES += \
-    $(OUT_DIR)/target/product/miatoll/obj/SHARED_LIBRARIES/libandroidicu_intermediates/libandroidicu.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libandroidicu.so
+    $(OUT_DIR)/target/product/$(PRODUCT_RELEASE_NAME)/obj/SHARED_LIBRARIES/libandroidicu_intermediates/libandroidicu.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libandroidicu.so
+
+# Dual target tree hax
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/$(PRODUCT_RELEASE_NAME)/recovery.fstab:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/recovery.fstab \
+    $(DEVICE_PATH)/$(PRODUCT_RELEASE_NAME)/twrp.flags:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/twrp.flags

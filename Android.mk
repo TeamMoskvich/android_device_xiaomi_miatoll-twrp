@@ -16,6 +16,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE), $(filter $(TARGET_DEVICE),miatoll miatoll_fbev2))
-	include $(call all-subdir-makefiles,$(LOCAL_PATH))
+ifneq ($(filter miatoll miatoll_fbev2, $(TARGET_DEVICE)),)
+	include $(call all-makefiles-under,$(LOCAL_PATH))
 endif
